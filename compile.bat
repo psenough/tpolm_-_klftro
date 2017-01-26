@@ -1,0 +1,1 @@
+java -jar compiler.jar --compilation_level ADVANCED_OPTIMIZATIONS --js jetski.js --externs closure_audiocontext.js --externs closure_ctxhash.js --js_output_file=jetski_closure.js

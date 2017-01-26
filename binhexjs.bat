@@ -1,1 +1,1 @@
-ruby binhexjs.rb THX.syphus-Jetski[Twin_Beam_cover].ahx >> AHXdump.js
+ruby binhexjs.rb original_assets\3ameternal.ahx >> AHXdump.js

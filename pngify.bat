@@ -1,0 +1,1 @@
+ruby pnginator.rb jetski_closure.js jetski.png.html
