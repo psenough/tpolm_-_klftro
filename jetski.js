@@ -23,21 +23,19 @@ b.innerHTML = '';
 var c = D.createElement('canvas');
 b.appendChild(c);
 c.style.background = "transparent";
+var ctx = c.getContext('2d');
 
 //
 // hash canvas context functions larger then 6 characters
 // based on a hack documented by cb and p01
 // referenced in closure_ctxhash.js
 //
-
-var ctx = c.getContext('2d');
-for(k in ctx)ctx[k[0]+[k[6]]]=ctx[k];
-
-
+//
+//for(k in ctx)ctx[k[0]+[k[6]]]=ctx[k];
+// not working properly anymore(maybe because of new closure version?)
+//
 var w = ctx.width = c.width = window.innerWidth;
 var h = ctx.height = c.height = window.innerHeight;
-
-
 
 var pattern = note = 0;
 

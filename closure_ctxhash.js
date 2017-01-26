@@ -18,3 +18,6 @@ ctx.prototype.re = function() {};
 ctx.prototype.ce = function(a,b,c,d) {};
 
 ctx.prototype.fc = function(a,b,c,d) {};
+
+/** @type {string} */
+ctx.prototype.globalCompositeOperation;

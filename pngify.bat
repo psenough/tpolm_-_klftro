@@ -1,1 +1,1 @@
-ruby pnginator.rb jetski_closure.js jetski.png.html
+ruby pnginator.rb jetski_closure.js tpolm_-_klftro.png.html
