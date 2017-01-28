@@ -1957,39 +1957,55 @@ function drawCanvas() {
 				} else if (pattern == 8) {
 					fText("we kinda are...");
 				} else if (pattern == 9) {
-					fText("but here is a new intro anyway!");
+					fText("but KLF are coming back");
 				} else if (pattern == 10) {
-					fText("greetings fly out to:");
+					fText("so here is a KLFtro!");
 				} else if (pattern == 11) {
-					fText("Accession . ASD . Astroidea . ate bit");
+					fText("greets fly out to:");
 				} else if (pattern == 12) {
-					fText("TPOLM . BSDE . CPU . Calodox . Conspiracy");
+					fText("Accession . [BrCr] . ASD . Astroidea");
 				} else if (pattern == 13) {
-					fText("coprocessor . Darklite . deMarche . DESiRE");
+					fText("ate bit . TPOLM . Bomb . BSDE");
 				} else if (pattern == 14) {
-					fText("Epoch . Fairlight . flo . Fulcrum . Glenz");
+					fText("CPU . Calodox . Collapse . Cocoon");
 				} else if (pattern == 15) {
-					fText("Hooy-Program . Jugz . Kosmoplovci . TPOLM");
+					fText("Conspiracy . coprocessor . Darklite");
 				} else if (pattern == 16) {
-					fText("MaWi . Marshals . Mercury . MFX . Orange");
+					fText("deMarche . DESiRE . Epoch . Fairlight");
 				} else if (pattern == 17) {
-					fText("Quite . Razor 1911 . Rebels . Satori");
+					fText("Farbrausch . flo . Fulcrum . Glenz");
 				} else if (pattern == 18) {
-					fText("thesuper . TPOLM . TRSI . TRBL");
+					fText("Haujobb . Hornet . Hooy-Program . Jugz");
 				} else if (pattern == 19) {
-					fText("and you... ");
+					fText("Kosmoplovci . TPOLM . Logicoma . MaWi");
 				} else if (pattern == 20) {
-					fText("and your mother... (the giraffe)");
+					fText("Marshals . Mercury . MFX . Orange");
 				} else if (pattern == 21) {
+					fText("Quadtrip . Quite . Razor 1911 . Rebels");
+				} else if (pattern == 22) {
+					fText("Rift . Satori . Spontz . Still");
+				} else if (pattern == 23) {
+					fText("thesuper . TPOLM . TRSI . TRBL");
+				} else if (pattern == 24) {
+					fText("Unique . Unstable Label . TPOLM");
+				} else if (pattern == 25) {
+					fText("and you... ");
+				} else if (pattern == 26) {
+					fText("and your mother... (the giraffe)");
+				} else if (pattern == 27) {
 					fText("Enjoy Demobit 2017!");
-				} else if (pattern == 28) {
+				} else if (pattern == 30) {
 					fText("message for Antti:");
-				} else if (pattern == 29) {
-					fText("check the expiry date on your demo! it's due!");
+				} else if (pattern == 31) {
+					fText("A Koala can sleep up to 20 hours per day!");
+				} else if (pattern == 32) {
+					fText("so does the Emperor Penguin!");
+				} else if (pattern == 37) {
+					fText("credits");
 				} else if (pattern == 38) {
 					fText("code: ps - music: syphus");
 				} else if (pattern == 39) {
-					fText("looping...");
+					fText("looping..."); // until 23rd of August 2017
 				} else {
 					s();
 				}
