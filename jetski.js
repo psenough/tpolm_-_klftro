@@ -1509,11 +1509,17 @@ function distance(x1, y1, x2, y2) {
 	return Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2))
 }
 
-// http://stackoverflow.com/questions/9043805/test-if-two-lines-intersect-javascript-function
+// original from http://stackoverflow.com/questions/9043805/test-if-two-lines-intersect-javascript-function
 function lineIntersect(x1,y1,x2,y2,x3,y3,x4,y4) {
     var x=((x1*y2-y1*x2)*(x3-x4)-(x1-x2)*(x3*y4-y3*x4))/((x1-x2)*(y3-y4)-(y1-y2)*(x3-x4));
     var y=((x1*y2-y1*x2)*(y3-y4)-(y1-y2)*(x3*y4-y3*x4))/((x1-x2)*(y3-y4)-(y1-y2)*(x3-x4));
-    if (isNaN(x)||isNaN(y)) {
+	//x = parseFloat(x.toFixed(7));
+	//y = parseFloat(y.toFixed(7));
+	
+	//TODO: sometimes the point outside of segment comparison tests fails, when testing against a very long straight line
+	
+    //console.log(x + ' ' + y);
+	if (isNaN(x)||isNaN(y)) {
         return false;
     } else {
         if (x1>=x2) {
@@ -1537,7 +1543,7 @@ function lineIntersect(x1,y1,x2,y2,x3,y3,x4,y4) {
             if (!(y3<=y&&y<=y4)) {return false;}
         }
     }
-    return true;
+    return {'x':x, 'y':y};
 }
 
 var maxlines = 350;
@@ -1677,8 +1683,8 @@ function drawCanvas() {
 						let r2 = lines[k][p+1];
 						
 						let li = lineIntersect(r1['x'],r1['y'],r2['x'],r2['y'],ref['x'],ref['y'],thisx,thisy);
-						if (li) {
-							intersect = true;
+						if (li != false) {
+							intersect = li;
 							break;
 						}
 					}
@@ -1688,6 +1694,18 @@ function drawCanvas() {
 				// default same as previous segment
 				let visible = ref['visible'];
 				if (intersect) {
+
+					// snap to line intersection point
+					// snap the previous point if moving from visible to invisible
+					// snap the new point if its becoming visible
+					if (visible) {
+						ref['x'] = intersect['x'];
+						ref['y'] = intersect['y'];
+					} else {
+						thisx = intersect['x'];
+						thisy = intersect['y'];
+					}
+					
 					// chance it doesn't switch invisibility despite intersecting something
 					if (Math.random()<0.2) {
 						// as you were
