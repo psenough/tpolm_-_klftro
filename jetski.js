@@ -1451,14 +1451,23 @@ b.onload = function()
 	
 	,
 			function() {
-				ahxMaster.Play(ahxSong);
-				drawCanvas();
+				ctx.fillStyle = 'white';
+				ctx.font = '48px arial';
+				ctx.fillText('click me',w/2,h/2);
+				document.addEventListener('click',startDemo);
 			}
 		);
 
 //drawCanvas();
 }
 
+function startDemo() {
+	ahxMaster.Play(ahxSong);
+	w = ctx.width = c.width = window.innerWidth;
+	h = ctx.height = c.height = window.innerHeight;
+	drawCanvas();
+	document.removeEventListener('click',startDemo,false);
+}
 //
 // init general variables
 //
